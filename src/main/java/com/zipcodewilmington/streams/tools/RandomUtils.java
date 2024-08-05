@@ -10,7 +10,7 @@ import java.util.*;
 public final class RandomUtils {
     private static final Random random = new Random();
 
-    private RandomUtils() {
+    public RandomUtils() {
         /** This class is uninstantiable */
     }
 

@@ -14,11 +14,15 @@ import java.util.stream.Stream;
  * @ATTENTION_TO_STUDENTS You are FORBIDDEN from modifying this class
  */
 public class TestConversionAgent<T extends PersonConversionAgent<Person>> {
-    private final T conversionAgent;
+  private final T conversionAgent;
 
     private List<Person> personList;
     private Person[] personArray;
     private Stream<Person> personStream;
+    //private T conversionAgent = new ConversionAgent<>()
+
+//    public TestConversionAgent() {
+//    }
 
     public TestConversionAgent(T conversionAgent) {
         this.conversionAgent = conversionAgent;
@@ -43,6 +47,7 @@ public class TestConversionAgent<T extends PersonConversionAgent<Person>> {
 
     @Test
     public void testToList() {
+        System.out.println("testing");
         for (int i = 0; i < personList.size(); i++) {
             long listId = personList.get(i).getPersonalId();
             long arrayId = personArray[i].getPersonalId();
@@ -66,6 +71,7 @@ public class TestConversionAgent<T extends PersonConversionAgent<Person>> {
 
     @Test
     public void testToArray() {
+      //  long listId = personList.get(i).getPersonalId();
         for (int i = 0; i < personArray.length; i++) {
             long arrayId = personArray[i].getPersonalId();
             long listId = personList.get(i).getPersonalId();
